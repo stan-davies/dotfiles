@@ -1,9 +1,11 @@
 *
 !.gitignore
 !.config
-!.config/*
+!.config/**
+.config/curr-proj
 !.vimrc
 !.vim
-!.vim/*
+!.vim/**
 !.zshrc
 !.tmux.conf
+!DONT_FORGET_THIS_IS_A_GIT_REPO
