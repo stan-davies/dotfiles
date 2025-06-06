@@ -122,6 +122,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-g = 'workspace G'       # general
 
     alt-shift-g = 'move-node-to-workspace G'
+    alt-shift-b = 'move-node-to-workspace B'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 

@@ -10,8 +10,8 @@ syntax match cOperator	"\(<<\|>>\|[-+*/%&^|<>!=]\)="
 syntax match cOperator	"<<\|>>\|&&\|||\|++\|--\|->"
 syntax match cOperator	"[.!~*&%<>^|=+-]"
 
-syntax match stSemi     ";"
-highlight def link stSemi cComment
+" syntax match stSemi     ";"
+" highlight def link stSemi cComment
 
 syntax match cOperator	"/[^/*=]"me=e-1
 syntax match cOperator	"/$"

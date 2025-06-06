@@ -10,11 +10,11 @@ highlight ColorColumn   ctermbg=Red
 
 " bracket matching
 
-highlight MatchParen    ctermbg=4
+highlight MatchParen    ctermbg=0 cterm=underline
 
 " C syntax
 
-highlight cComment      ctermfg=7
+highlight cComment      ctermfg=7 cterm=italic
 highlight cString       ctermfg=Blue
 highlight cNumber       ctermfg=Magenta
 highlight cFloat        ctermfg=Magenta
