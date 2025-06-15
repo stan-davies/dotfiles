@@ -66,11 +66,11 @@
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": {
-                                        "mandatory": ["right_control"],
+                                        "mandatory": ["left_control"],
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "pointing_button": "button2" }],
+                                "to": [{ "pointing_button": "button1" }],
                                 "type": "basic"
                             },
                             {
@@ -170,7 +170,7 @@
                 },
                 {
                     "from": { "key_code": "down_arrow" },
-                    "to": [{ "key_code": "left_arrow" }]
+                    "to": [{ "key_code": "vk_none" }]
                 },
                 {
                     "from": { "key_code": "left_arrow" },
