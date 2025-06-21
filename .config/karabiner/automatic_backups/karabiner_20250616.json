@@ -53,7 +53,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "d",
+                                    "key_code": "v",
                                     "modifiers": {
                                         "mandatory": ["left_control"],
                                         "optional": ["any"]
@@ -64,7 +64,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "d",
+                                    "key_code": "v",
                                     "modifiers": {
                                         "mandatory": ["right_control"],
                                         "optional": ["any"]
