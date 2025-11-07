@@ -1,4 +1,4 @@
-syntax match stMacro "\v[A-Z]+(_[A-Z]+)*"
+syntax match stMacro "\v([A-Z]+(_[A-Z]+)*)\w+"
 
 syntax keyword stConst TRUE FALSE NULL
 highlight def link stConst cNumber 
@@ -9,9 +9,6 @@ highlight def link stComment cComment
 syntax match cOperator	"\(<<\|>>\|[-+*/%&^|<>!=]\)="
 syntax match cOperator	"<<\|>>\|&&\|||\|++\|--\|->"
 syntax match cOperator	"[.!~*&%<>^|=+-]"
-
-" syntax match stSemi     ";"
-" highlight def link stSemi cComment
 
 syntax match cOperator	"/[^/*=]"me=e-1
 syntax match cOperator	"/$"

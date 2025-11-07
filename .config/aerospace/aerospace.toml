@@ -118,7 +118,7 @@ automatically-unhide-macos-hidden-apps = false
 
     alt-t = 'workspace T'       # terminal
     alt-b = 'workspace B'       # browser
-    alt-s = 'workspace S'       # spotify
+    alt-m = 'workspace M'       # music
     alt-g = 'workspace G'       # general
 
     alt-shift-g = 'move-node-to-workspace G'
