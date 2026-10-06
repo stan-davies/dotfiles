@@ -9,3 +9,6 @@ fi
 
 dirname=$(basename "$dir")
 tmux new-window -n $dirname -c $dir
+# Can't then run 'tree' or anything because it would run that command in the
+# same space as all the above, not in the newly created space. Not sussed any
+# way around that, but it hardly matters.

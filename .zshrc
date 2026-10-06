@@ -16,7 +16,8 @@ alias spp='~/.config/scripts/set-proj-path.sh'
 
 # Clear (with) tree
 alias ct='clear;tree'
-# Clear (with) tree, -l (I can't remember why I originally made that flag an 'l')
+# Clear (with) tree, -l, which sets depth to 1 (I can't remember why I
+# originally made that flag an 'l')
 alias ctl='clear;tree -l'
 # Clear (with) tree, -l, show all files
 alias cta='clear;tree -l -a'
