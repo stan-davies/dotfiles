@@ -159,26 +159,6 @@
                             "to": [{ "key_code": "right_control" }]
                         }
                     ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 20043,
-                        "vendor_id": 35176
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
-                    ],
-                    "treat_as_built_in_keyboard": true
                 }
             ],
             "name": "Default profile",
@@ -187,6 +167,22 @@
                 {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "left_control" }]
+                },
+                {
+                    "from": { "key_code": "down_arrow" },
+                    "to": [{ "key_code": "left_arrow" }]
+                },
+                {
+                    "from": { "key_code": "left_arrow" },
+                    "to": [{ "consumer_key_code": "rewind" }]
+                },
+                {
+                    "from": { "key_code": "right_arrow" },
+                    "to": [{ "consumer_key_code": "fast_forward" }]
+                },
+                {
+                    "from": { "key_code": "up_arrow" },
+                    "to": [{ "key_code": "up_arrow" }]
                 }
             ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }

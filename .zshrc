@@ -1,5 +1,5 @@
 # prompt
-PS1="%B%F{magenta}%1~%  %f$%b "
+PS1="%B%F{magenta}%1~%  %f:%b "
 
 # Edit PDF live
 alias epl='~/.config/scripts/edit-pdf.sh'
