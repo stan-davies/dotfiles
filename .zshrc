@@ -1,5 +1,20 @@
+# for git stuff in prompt
+# autoload -Uz vcs_info                   # version control info
+# precmd_vcs_info() { vcs_info }          # no idea
+# precmd_functions+=( precmd_vcs_info )   # haven't the foggiest
+# setopt prompt_subst                     # something about prompt substitution?
+
 # prompt
-PS1="%B%F{magenta}%1~%  %f:%b "
+# PROMPT=$'%B%F{magenta}%1~ %(?..%F{red}\U2717%? )%f%b\U25b6 '
+PROMPT=$'%B%F{magenta}%1~ %f:%b '
+# RPROMPT=$'%(?..%F{red}\U2717 %?)%f  ${vcs_info_msg_0_}'
+RPROMPT=$'%(?..%F{red}\U2717 %?)%f'
+
+# zstyle ':vcs_info:git:*' formats '%r(%b)'     # repo name (branch name)
+# zstyle ':vcs_info:*' enable git
+
+
+# 2723  2717
 
 # Edit PDF live
 alias epl='~/.config/scripts/edit-pdf.sh'
