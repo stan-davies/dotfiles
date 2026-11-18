@@ -11,4 +11,4 @@ bold = { family = "SF Mono", style = "Bold" }
 size = 27.5
 
 [general]
-import = ["themes/bm-dim.toml"]
+import = ["themes/bm-brt.toml"]

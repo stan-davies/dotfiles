@@ -10,7 +10,8 @@ highlight ColorColumn   ctermbg=Red
 
 " bracket matching
 
-highlight MatchParen    ctermbg=0 cterm=underline
+" highlight MatchParen    ctermbg=0 cterm=underline     " for dark mode, bm-dim
+highlight MatchParen    ctermbg=LightBlue cterm=underline       " for light mode, bm-brt
 
 " C syntax
 

@@ -6,7 +6,7 @@
 
 # prompt
 # PROMPT=$'%B%F{magenta}%1~ %(?..%F{red}\U2717%? )%f%b\U25b6 '
-PROMPT=$'%B%F{magenta}%1~ %f:%b '
+PROMPT=$'%F{magenta}%1~ %f\U2502  '
 # RPROMPT=$'%(?..%F{red}\U2717 %?)%f  ${vcs_info_msg_0_}'
 RPROMPT=$'%(?..%F{red}\U2717 %?)%f'
 
