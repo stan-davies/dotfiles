@@ -6,7 +6,8 @@
 
 # prompt
 # PROMPT=$'%B%F{magenta}%1~ %(?..%F{red}\U2717%? )%f%b\U25b6 '
-PROMPT=$'%F{magenta}%1~ %f\U2502  '
+PROMPT=$'%F{red}%1~ %f\U2502  '         # for light mode, bm-brt
+# PROMPT=$'%B%F{magenta}%1~ %f: %b  '   # for dark mode, bm-dim
 # RPROMPT=$'%(?..%F{red}\U2717 %?)%f  ${vcs_info_msg_0_}'
 RPROMPT=$'%(?..%F{red}\U2717 %?)%f'
 

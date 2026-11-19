@@ -1,7 +1,7 @@
 " do highlight that syntax indeed mr. vim
 syntax on
 " set colourscheme to my lovely colourscheme
-colorscheme stand
+colorscheme stand-brt
 
 " these numbers are all to do with 8 space wide tabs
 set tabstop=8

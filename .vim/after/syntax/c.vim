@@ -5,17 +5,17 @@
 syntax match stMacro "\v([A-Z]+(_[A-Z]+)*)\w+"
 
 syntax keyword stConst TRUE FALSE NULL
-highlight def link stConst cNumber 
+highlight def link stConst cConstant
 
 
 syntax match stComment  "// ?\w*"
 highlight def link stComment cComment
 
+" Very nearly works but not quite, stStructName picks up too much other stuff.
 " syntax clear cStructure
-" syntax keyword stStruct struct
-" highlight def link stStruct cString
-" syntax match stTypedef  "struct\s*\zs\w*"
-" highlight def link stTypedef cType
+" syntax keyword cStructure struct union enum nextgroup=stStructName
+" syntax match stStructName " \w\+" contained
+" highlight def link stStructName cType
 
 syntax match cOperator	"\(<<\|>>\|[-+*/%&^|<>!=]\)="
 syntax match cOperator	"<<\|>>\|&&\|||\|++\|--\|->"
@@ -28,5 +28,5 @@ syntax match cOperator  "&&\|||"
 highlight def link stOperator Operator
 
 syntax match stParen    "(" contains=cParen
-syntax match stFunction "\(\w\|\d\|_\|-\)\+(" contains=stParen
+syntax match stFunction "\(\w\|\d\|_\)\+(" contains=stParen
 highlight def link stFunction cFunction
