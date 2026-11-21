@@ -10,7 +10,7 @@ highlight ColorColumn   ctermbg=Red
 
 " bracket matching
 
-highlight MatchParen    ctermbg=LightGreen cterm=underline
+highlight MatchParen    ctermbg=Blue cterm=underline
 
 " C syntax
 
@@ -32,7 +32,7 @@ highlight cStructure    ctermfg=Blue
 
 highlight cSpecial      ctermfg=DarkBlue
 highlight Operator      ctermfg=Red
-highlight stMacro       ctermfg=Yellow cterm=bold
+highlight stMacro       ctermfg=Magenta cterm=bold
 highlight cConstant     ctermfg=Red cterm=bold
 
 " asm syntax

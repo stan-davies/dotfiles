@@ -50,6 +50,12 @@ alias eta() {
         cd $1; clear; tree -l -a
 }
 
+# Open app (2) in given aerospace workspace (1).
+alias opp() {
+        aerospace workspace $1; open -a $2
+}
+
+
 # attach to a sessions if there is one otherwise create one anew
 if [ -z $TMUX ]; then
         tmux attach || tmux new
