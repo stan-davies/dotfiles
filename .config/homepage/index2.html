@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Home</title>
+
+                <style>
+/*                        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+                        @font-face {
+                                font-family: "EBG";
+                                src: url("/Users/stand/Library/Fonts/EBGaramond-VariableFont_wght.ttf");
+                        }
+
+                        body {
+                                font-size: 22pt;
+                                background-color: #f7eee4;
+                                font-family: "EBG";
+                                margin: 0;
+                        }
+
+                        #curtain {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+                                opacity: 90%;
+                        }
+
+                        a {
+                                border: 2px solid black;
+                                background-color: #f7eee4;
+                                filter: drop-shadow(5px 5px black);
+                                position: absolute;
+                                text-decoration: none;
+                                /* width, height, positioning, border radius
+                                 * done procedurally */
+                        }
+
+                        a:hover {
+                                filter: none;
+                                z-index: 100;
+                        }
+
+                        a:hover > span {
+                                font-style: italic;
+                        }
+
+                        .blueb:hover ~ #curtain {
+                                display: block;
+                                background-color: #77a4e3;
+                        }
+
+                        .orangeb:hover ~ #curtain {
+                                display: block;
+                                background-color: #682860;
+                        }
+
+                        .redb:hover ~ #curtain {
+                                display: block;
+                                background-color: #b90e0a;
+                        }
+
+                        .greenb:hover ~ #curtain {
+                                display: block;
+                                background-color: #466d1d;
+                        }
+
+                        .dark_blueb:hover ~ #curtain {
+                                display: block;
+                                background-color: #001d92;
+                        }
+
+                        .yellowb:hover ~ #curtain {
+                                display: block;
+                                background-color: #ffdf00;
+                        }
+
+                        .purpleb:hover ~ #curtain {
+                                display: block;
+                                background-color: #682860;
+                        }
+
+                        span {
+                                color: #1d1f21;
+
+                                display: flex;
+                                justify-content: center;
+
+                                position: relative;
+                        }
+                </style>
+        </head>
+        <body>
+                <a id="l1" href="https://www.github.com/stan-davies"><span>github</span></a>
+                <a id="l2" href="https://www.youtube.com/feed/subscriptions"><span>youtube</span></a>
+                <a id="l3" href="https://www.bbc.co.uk"><span>bbc</span></a>
+                <a id="l4" href="https://en.cppreference.com/w/c/header.html"><span>libc</span></a>
+                <a id="l5" href="https://www.ole.bris.ac.uk/ultrra/institution-page"><span>blackboard</span></a>
+
+                <div id="curtain"></div>
+
+                <script>
+                        let lii;
+                        let n;
+                        let lefts = [];
+                        let tops = [];
+                        let valid;
+                        let attempts;
+                        let colours = ["blueb", "orangeb", "redb", "greenb", "dark_blueb", "yellowb", "purpleb"];
+                        for (let i = 1; i <= 5; ++i) {
+                                lii = document.getElementById(`l${i}`);
+
+                                n = (Math.random() * 10) + 5;
+                                lii.style.width = lii.style.height = `${n}em`;
+                                lii.style.borderRadius = `${n / 2}em`;
+                                lii.children[0].style.top = `${n / 2 - 0.8}em`;
+                                // Try make them render totally not on top of
+                                // each other.
+                                
+                                valid = false;
+                                attempts = 0;
+                                while (true) {
+                                        attempts += 1;
+                                        if (attempts == 5) {
+                                                break;
+                                        }
+                                        n = (Math.random() * 80) + 5;
+                                        valid = true;
+                                        for (let l of lefts) {
+                                                if (Math.abs(n - l) < 15) {
+                                                        valid = false;
+                                                        break;
+                                                }
+                                        }
+
+                                        if (valid) {
+                                                break;
+                                        }
+                                }
+                                lefts.push(n);
+                                lii.style.left = `${n}%`;
+                                                        
+
+                                valid = false;
+                                attempts = 0;
+                                while (true) {
+                                        attempts += 1;
+                                        if (attempts == 5) {
+                                                break;
+                                        }
+                                        n = (Math.random() * 60) + 10;
+                                        valid = true;
+                                        for (let t of tops) {
+                                                if (Math.abs(n - t) < 15) {
+                                                        valid = false;
+                                                        break;
+                                                }
+                                        }
+
+                                        if (valid) {
+                                                break;
+                                        }
+                                }
+                                tops.push(n);
+                                lii.style.top = `${n}%`;
+
+                                n = Math.floor(Math.random() * colours.length);
+                                lii.classList.add(colours[n]);
+                                colours.splice(n, 1);
+                        }
+                </script>
+        </body>
+</html>
