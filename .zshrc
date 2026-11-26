@@ -24,9 +24,6 @@ alias epl='~/.config/scripts/edit-pdf.sh'
 export PATH=$PATH:~/Documents/c-code/mit
 alias mit='mit'
 
-# Copy note format
-alias cp-notefmt='cp ~/Documents/typst-docs/note-conf/note-conf.typ .'
-
 # Set (current) project path
 alias spp='~/.config/scripts/set-proj-path.sh'
 
@@ -35,7 +32,7 @@ alias ct='clear;tree'
 # Clear (with) tree, -l, which sets depth to 1 (I can't remember why I
 # originally made that flag an 'l')
 alias ctl='clear;tree -l'
-# Clear (with) tree, -l, show all files
+# Clear (with) tree, -l, show hidden files
 alias cta='clear;tree -l -a'
 # Enter with tree
 alias et() {
@@ -50,13 +47,11 @@ alias eta() {
         cd $1; clear; tree -l -a
 }
 
-# Open app (2) in given aerospace workspace (1).
 alias opp() {
-        aerospace workspace $1; open -a $2
+        ~/.config/scripts/roundabout.sh $1 $2
 }
 
-
-# attach to a sessions if there is one otherwise create one anew
+# Attach to a session if there is one otherwise create one.
 if [ -z $TMUX ]; then
         tmux attach || tmux new
 fi
